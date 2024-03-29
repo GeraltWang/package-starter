@@ -1,25 +1,25 @@
 @import "./colors.scss";
 
 :root {
-  --color-primary: var(--color-primary-6);
-  --color-primary-hover: var(--color-primary-5);
-  --color-primary-active: var(--color-primary-7);
-  --color-primary-selected: var(--color-primary-1);
+  --uu-color-primary: var(--uu-color-primary-6);
+  --uu-color-primary-hover: var(--uu-color-primary-5);
+  --uu-color-primary-active: var(--uu-color-primary-7);
+  --uu-color-primary-selected: var(--uu-color-primary-1);
 
-  --color-success: var(--color-success-6);
-  --color-success-hover: var(--color-success-5);
-  --color-success-active: var(--color-success-7);
-  --color-success-selected: var(--color-success-1);
+  --uu-color-success: var(--uu-color-success-6);
+  --uu-color-success-hover: var(--uu-color-success-5);
+  --uu-color-success-active: var(--uu-color-success-7);
+  --uu-color-success-selected: var(--uu-color-success-1);
 
-  --color-warning: var(--color-warning-6);
-  --color-warning-hover: var(--color-warning-5);
-  --color-warning-active: var(--color-warning-7);
-  --color-warning-selected: var(--color-warning-1);
+  --uu-color-warning: var(--uu-color-warning-6);
+  --uu-color-warning-hover: var(--uu-color-warning-5);
+  --uu-color-warning-active: var(--uu-color-warning-7);
+  --uu-color-warning-selected: var(--uu-color-warning-1);
 
-  --color-error: var(--color-error-5);
-  --color-error-hover: var(--color-error-4);
-  --color-error-active: var(--color-error-7);
-  --color-error-selected: var(--color-error-1);
+  --uu-color-error: var(--uu-color-error-5);
+  --uu-color-error-hover: var(--uu-color-error-4);
+  --uu-color-error-active: var(--uu-color-error-7);
+  --uu-color-error-selected: var(--uu-color-error-1);
 
   // 中性色配置
   --uu-color-base: #000000e0;
