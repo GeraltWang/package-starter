@@ -18,6 +18,10 @@ export default defineConfig({
   resolve: {
     alias: [
       {
+        find: /^unknown-ui/,
+        replacement: path.resolve(baseUrl, 'packages/unknown-ui/src'),
+      },
+      {
         find: /^@unknown-ui\/utils/,
         replacement: path.resolve(baseUrl, 'packages/utils/src'),
       },

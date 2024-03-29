@@ -10,7 +10,9 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "paths": {
-      "@unknown-ui/utils": ["packages/utils/src"]
+      "@unknown-ui/utils": ["packages/utils/src"],
+      "unknown-ui": ["packages/unknown-ui/src"],
+      "unknown-ui/*": ["packages/unknown-ui/src/*"]
     },
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
@@ -24,5 +26,8 @@
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.vitepress.json" }
+  ]
 }

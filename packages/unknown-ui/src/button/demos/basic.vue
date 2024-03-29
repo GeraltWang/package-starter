@@ -14,5 +14,6 @@ test()
   <div>
     Button
     {{ message }}
+    <UButton />
   </div>
 </template>
