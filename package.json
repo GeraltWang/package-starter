@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@mistjs/eslint-config": "^1.0.0",
+    "@types/node": "^20.11.30",
     "@vitejs/plugin-vue": "^5.0.4",
     "eslint": "8.55.0",
     "husky": "^9.0.11",

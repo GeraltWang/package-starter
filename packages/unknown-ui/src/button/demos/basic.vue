@@ -1,11 +1,13 @@
 <docs>
-  ---
-  title: Basic
-  ---
+
 </docs>
 
 <script setup lang="ts">
+import { test } from '@unknown-ui/utils'
+
 const message = 'Hello, VitePress!'
+
+test()
 </script>
 
 <template>
