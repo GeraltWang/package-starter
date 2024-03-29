@@ -7,6 +7,7 @@ export default defineConfig({
   rewrites: {
     'docs/(.*)': '(.*)',
     'packages/unknown-ui/src/:component/(.*)': 'components/:component/(.*)',
+    'packages/utils/src/(.*)': 'utils/(.*)',
   },
   // srcDir: './docs',
   themeConfig: {
@@ -21,6 +22,9 @@ export default defineConfig({
     sidebar: {
       '/components/': [
         { text: 'Button 按钮', link: '/components/button/' },
+      ],
+      '/utils/': [
+        { text: 'gen-class', link: '/utils/gen-class' },
       ],
     },
 
