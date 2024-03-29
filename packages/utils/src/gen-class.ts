@@ -17,7 +17,7 @@ export function useClassNames(componentName: string) {
             return `${acc}--${arg1}`
         }
         return `${acc}-${cur}`
-      }, componentClass)
+      }, componentClass) as string
     }
     return componentClass
   }

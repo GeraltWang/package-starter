@@ -1,3 +1,111 @@
-.u-button {
-  color: blue;
+@import "../../style/index.scss";
+
+.uu-button {
+  background: none;
+  cursor: pointer;
+  border: 1px solid var(--uu-color-border);
+  outline: none;
+  color: inherit;
+  padding: 4px 10px;
+  border-radius: 4px;
+
+  // 默认按钮样式
+  &--default {
+    border-color: var(--uu-color-border);
+    color: var(--uu-color-text);
+
+    &:hover {
+      border-color: var(--uu-color-primary);
+      color: var(--uu-color-primary);
+    }
+
+    &:active {
+      border-color: var(--uu-color-primary-active);
+      color: var(--uu-color-primary-active);
+    }
+  }
+  // 主要按钮样式
+  &--primary {
+    border-color: var(--uu-color-primary);
+    color: white;
+    background-color: var(--uu-color-primary);
+
+    &:hover {
+      border-color: var(--uu-color-primary-hover);
+      background-color: var(--uu-color-primary-hover);
+    }
+
+    &:active {
+      border-color: var(--uu-color-primary-active);
+      background-color: var(--uu-color-primary-active);
+    }
+  }
+  // 成功按钮样式
+  &--success {
+    border-color: var(--uu-color-success);
+    color: white;
+    background-color: var(--uu-color-success);
+
+    &:hover {
+      border-color: var(--uu-color-success-hover);
+      background-color: var(--uu-color-success-hover);
+    }
+
+    &:active {
+      border-color: var(--uu-color-success-active);
+      background-color: var(--uu-color-success-active);
+    }
+  }
+  // 警告按钮样式
+  &--warning {
+    border-color: var(--uu-color-warning);
+    color: white;
+    background-color: var(--uu-color-warning);
+
+    &:hover {
+      border-color: var(--uu-color-warning-hover);
+      background-color: var(--uu-color-warning-hover);
+    }
+
+    &:active {
+      border-color: var(--uu-color-warning-active);
+      background-color: var(--uu-color-warning-active);
+    }
+  }
+  // 错误按钮样式
+  &--error {
+    border-color: var(--uu-color-error);
+    color: white;
+    background-color: var(--uu-color-error);
+
+    &:hover {
+      border-color: var(--uu-color-error-hover);
+      background-color: var(--uu-color-error-hover);
+    }
+
+    &:active {
+      border-color: var(--uu-color-error-active);
+      background-color: var(--uu-color-error-active);
+    }
+  }
+  // 边框默认样式
+  &-outline--default {
+    border-style: solid;
+  }
+  // 边框虚线样式
+  &-outline--dashed {
+    border-style: dashed;
+  }
+  // 无边框样式
+  &-outline--none {
+    border-style: none;
+  }
+  // 按钮禁用样式
+  &:disabled {
+    cursor: not-allowed;
+    color: #bfbfbf;
+    border-color: #d9d9d9;
+    background-color: #f0f0f0;
+  }
+
 }

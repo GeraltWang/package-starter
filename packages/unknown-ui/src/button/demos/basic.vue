@@ -3,17 +3,33 @@
 </docs>
 
 <script setup lang="ts">
-import { test } from '@unknown-ui/utils'
-
-const message = 'Hello, VitePress!'
-
-test()
 </script>
 
 <template>
   <div>
-    Button
-    {{ message }}
-    <UButton />
+    <UButton>default</UButton>
+    <UButton disabled>
+      disabled
+    </UButton>
+    <UButton type="primary">
+      primary
+    </UButton>
+    <UButton type="success">
+      success
+    </UButton>
+    <UButton type="warning">
+      warning
+    </UButton>
+    <UButton type="error">
+      error
+    </UButton>
+  </div>
+  <div>
+    <UButton outline="none">
+      outline none
+    </UButton>
+    <UButton outline="dashed">
+      outline dashed
+    </UButton>
   </div>
 </template>
