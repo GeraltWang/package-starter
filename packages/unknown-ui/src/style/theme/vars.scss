@@ -1,22 +1,19 @@
-@import "./colors.scss";
-@import "./font.scss";
+@import "./colors";
+@import "./font";
 
 :root {
   --uu-color-primary: var(--uu-color-primary-6);
   --uu-color-primary-hover: var(--uu-color-primary-5);
   --uu-color-primary-active: var(--uu-color-primary-7);
   --uu-color-primary-selected: var(--uu-color-primary-1);
-
   --uu-color-success: var(--uu-color-success-6);
   --uu-color-success-hover: var(--uu-color-success-5);
   --uu-color-success-active: var(--uu-color-success-7);
   --uu-color-success-selected: var(--uu-color-success-1);
-
   --uu-color-warning: var(--uu-color-warning-6);
   --uu-color-warning-hover: var(--uu-color-warning-5);
   --uu-color-warning-active: var(--uu-color-warning-7);
   --uu-color-warning-selected: var(--uu-color-warning-1);
-
   --uu-color-error: var(--uu-color-error-5);
   --uu-color-error-hover: var(--uu-color-error-4);
   --uu-color-error-active: var(--uu-color-error-7);
