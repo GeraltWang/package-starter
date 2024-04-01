@@ -1,4 +1,4 @@
-@import "../../style/index.scss";
+@import "../../style/index";
 
 .uu-button {
   --uu-button-font-size-small: var(--uu-font-size-small);
@@ -8,92 +8,96 @@
   display: inline-flex;
   align-items: center;
   height: 32px;
-  background: none;
-  cursor: pointer;
-  border: 1px solid var(--uu-color-border);
-  outline: none;
-  color: inherit;
-  font-size: var(--uu-button-font-size-base);
   padding: 4px 8px;
+  font-size: var(--uu-button-font-size-base);
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: 1px solid var(--uu-color-border);
   border-radius: 4px;
+  outline: none;
 
   // 默认按钮样式
   &--default {
-    border-color: var(--uu-color-border);
     color: var(--uu-color-text);
+    border-color: var(--uu-color-border);
 
     &:hover {
-      border-color: var(--uu-color-primary);
       color: var(--uu-color-primary);
+      border-color: var(--uu-color-primary);
     }
 
     &:active {
-      border-color: var(--uu-color-primary-active);
       color: var(--uu-color-primary-active);
+      border-color: var(--uu-color-primary-active);
     }
   }
+
   // 主要按钮样式
   &--primary {
-    border-color: var(--uu-color-primary);
     color: white;
     background-color: var(--uu-color-primary);
+    border-color: var(--uu-color-primary);
 
     &:hover {
-      border-color: var(--uu-color-primary-hover);
       background-color: var(--uu-color-primary-hover);
+      border-color: var(--uu-color-primary-hover);
     }
 
     &:active {
-      border-color: var(--uu-color-primary-active);
       background-color: var(--uu-color-primary-active);
+      border-color: var(--uu-color-primary-active);
     }
   }
+
   // 成功按钮样式
   &--success {
-    border-color: var(--uu-color-success);
     color: white;
     background-color: var(--uu-color-success);
+    border-color: var(--uu-color-success);
 
     &:hover {
-      border-color: var(--uu-color-success-hover);
       background-color: var(--uu-color-success-hover);
+      border-color: var(--uu-color-success-hover);
     }
 
     &:active {
-      border-color: var(--uu-color-success-active);
       background-color: var(--uu-color-success-active);
+      border-color: var(--uu-color-success-active);
     }
   }
+
   // 警告按钮样式
   &--warning {
-    border-color: var(--uu-color-warning);
     color: white;
     background-color: var(--uu-color-warning);
+    border-color: var(--uu-color-warning);
 
     &:hover {
-      border-color: var(--uu-color-warning-hover);
       background-color: var(--uu-color-warning-hover);
+      border-color: var(--uu-color-warning-hover);
     }
 
     &:active {
-      border-color: var(--uu-color-warning-active);
       background-color: var(--uu-color-warning-active);
+      border-color: var(--uu-color-warning-active);
     }
   }
+
   // 错误按钮样式
   &--error {
-    border-color: var(--uu-color-error);
     color: white;
     background-color: var(--uu-color-error);
+    border-color: var(--uu-color-error);
 
     &:hover {
-      border-color: var(--uu-color-error-hover);
       background-color: var(--uu-color-error-hover);
+      border-color: var(--uu-color-error-hover);
     }
 
     &:active {
-      border-color: var(--uu-color-error-active);
       background-color: var(--uu-color-error-active);
+      border-color: var(--uu-color-error-active);
     }
   }
 
@@ -104,6 +108,7 @@
       padding: 2px 6px;
       font-size: var(--uu-button-font-size-small);
     }
+
     // 大按钮样式
     &--large {
       height: 38px;
@@ -116,11 +121,14 @@
     // 边框默认样式
     &--default {
       border-style: solid;
+
       // 边框虚线样式
     }
+
     &--dashed {
       border-style: dashed;
     }
+
     // 无边框样式
     &--none {
       border-style: none;
@@ -129,9 +137,9 @@
 
   // 按钮禁用样式
   &:disabled {
-    cursor: not-allowed;
     color: #bfbfbf;
-    border-color: #d9d9d9;
+    cursor: not-allowed;
     background-color: #f0f0f0;
+    border-color: #d9d9d9;
   }
 }
