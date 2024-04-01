@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { useClassNames } from '@unknown-ui/utils'
+import type { ButtonProps } from './interface'
 
 defineOptions({
   name: 'UButton',
 })
 
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<ButtonProps>(), {
   type: 'default',
   outline: 'default',
   disabled: false,
@@ -13,13 +14,6 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const emit = defineEmits(['click'])
-
-interface Props {
-  type?: 'default' | 'primary' | 'success' | 'warning' | 'error'
-  outline?: 'default' | 'dashed' | 'none'
-  disabled?: boolean
-  size?: 'default' | 'small' | 'large'
-}
 
 const { c, cx, cm } = useClassNames('button')
 
