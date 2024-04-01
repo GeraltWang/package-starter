@@ -5,3 +5,8 @@ export interface InputProps {
 }
 
 export type InputSize = 'small' | 'default' | 'large'
+
+export const originalInputAttrs = [
+  'autocomplete',
+  'autofocus',
+]

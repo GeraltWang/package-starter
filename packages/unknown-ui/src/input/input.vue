@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { nextTick, onMounted, ref, useSlots } from 'vue'
+import { nextTick, onMounted, ref, useAttrs, useSlots } from 'vue'
 import { useClassNames } from '@unknown-ui/utils'
-import type { InputProps } from './interface'
+import { omit, pick } from 'lodash-es'
+import { type InputProps, originalInputAttrs } from './interface'
 
 defineOptions({
   name: 'UInput',
+  inheritAttrs: false,
 })
 
 const props = withDefaults(defineProps<InputProps>(), {
@@ -19,6 +21,8 @@ defineSlots<{
   prefix(): any
   suffix(): any
 }>()
+
+const attrs = useAttrs()
 
 const slots = useSlots()
 
@@ -60,17 +64,30 @@ function handleInput(event: Event) {
   })
 }
 
+function focus() {
+  inputRef.value?.focus()
+}
+
+function blur() {
+  inputRef.value?.blur()
+}
+
+defineExpose({
+  focus,
+  blur,
+})
+
 onMounted(() => {
   setInputValue()
 })
 </script>
 
 <template>
-  <div :class="cls">
+  <div :class="cls" v-bind="omit(attrs, originalInputAttrs)">
     <span v-if="slots.prefix" :class="c(ce('prefix'))">
       <slot name="prefix" />
     </span>
-    <input ref="inputRef" :class="inputCls" :value="modelValue" type="text" :disabled="props.disabled" @input="handleInput">
+    <input ref="inputRef" :class="inputCls" v-bind="pick(attrs, originalInputAttrs)" :value="modelValue" type="text" :disabled="props.disabled" @input="handleInput">
     <span v-if="slots.suffix" :class="c(ce('suffix'))">
       <slot name="suffix" />
     </span>

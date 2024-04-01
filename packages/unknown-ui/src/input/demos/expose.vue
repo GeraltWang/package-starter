@@ -1,6 +1,6 @@
 <docs>
 ---
-title: 基础使用
+title: 使用内置方法
 ---
 </docs>
 
@@ -8,12 +8,21 @@ title: 基础使用
 import { ref } from 'vue'
 
 const value = ref('unknown-ui')
+
+const inputRef = ref()
+
+function handleFocus() {
+  inputRef.value?.focus()
+}
 </script>
 
 <template>
   <div class="components-wrapper">
     <div>{{ value }}</div>
-    <UInput v-model="value" autofocus />
+    <UInput ref="inputRef" v-model="value" />
+    <UButton type="primary" @click="handleFocus">
+      Focus
+    </UButton>
   </div>
 </template>
 
