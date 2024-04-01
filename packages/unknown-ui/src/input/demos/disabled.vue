@@ -9,6 +9,6 @@ title: 禁用输入框
 
 <template>
   <div>
-    <UInput disabled />
+    <UInput disabled placeholder="disabled" />
   </div>
 </template>

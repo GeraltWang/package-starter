@@ -7,13 +7,14 @@ title: 基础使用
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const value = ref('unknown-ui')
+const value = ref('')
 </script>
 
 <template>
   <div class="components-wrapper">
     <div>{{ value }}</div>
-    <UInput v-model="value" autofocus />
+    <UInput v-model="value" autofocus placeholder="请输入" />
+    <UInput v-model="value" :outline="false" autofocus placeholder="无边框" />
   </div>
 </template>
 

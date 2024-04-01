@@ -1,20 +1,24 @@
 .uu-input {
   box-sizing: border-box;
-  display:  inline-flex;
+  display: inline-flex;
   align-items: center;
   height: 32px;
   padding-inline: 8px;
   font-size: var(--uu-font-size-base);
   line-height: 1;
   cursor: text;
-  border: 1px solid var(--uu-color-border);
   border-radius: 4px;
+  transition: all 0.2s;
 
   input {
     width: 100%;
     font-size: inherit;
     font-weight: inherit;
     line-height: inherit;
+  }
+
+  &:hover {
+    border-color: var(--uu-color-primary);
   }
 
   &__prefix {
@@ -25,7 +29,7 @@
     margin-left: 8px;
   }
 
-  &--large {
+  &-size--large {
     height: 38px;
     padding-inline: 10px;
     font-size: var(--uu-font-size-large);
@@ -39,7 +43,7 @@
     }
   }
 
-  &--small {
+  &-size--small {
     height: 28px;
     padding-inline: 6px;
     font-size: var(--uu-font-size-small);
@@ -57,11 +61,19 @@
     border-color: var(--uu-color-primary);
   }
 
+  &--outline {
+    border: 1px solid var(--uu-color-border);
+  }
+
   &--disabled {
     color: var(--uu-color-text-disabled);
     cursor: not-allowed;
     background: #f5f5f5;
     border-color: var(--uu-color-text-disabled);
+
+    &:hover {
+      border-color: var(--uu-color-text-disabled);
+    }
   }
 
   &-input {

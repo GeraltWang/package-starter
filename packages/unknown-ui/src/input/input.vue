@@ -11,6 +11,7 @@ defineOptions({
 
 const props = withDefaults(defineProps<InputProps>(), {
   size: 'default',
+  outline: true,
 })
 
 const emit = defineEmits<{
@@ -32,10 +33,8 @@ const cls = cx(() => {
   return {
     [c()]: true,
     [c(cm('disabled'))]: props.disabled,
-    [c(cm(props.size))]: !!props.size,
-    // [c(cm(props.type))]: true,
-    // [c('outline', cm(props.outline))]: true,
-    // [c('size', cm(props.size))]: true,
+    [c('size', cm(props.size))]: !!props.size,
+    [c(cm('outline'))]: props.outline,
   }
 })
 
