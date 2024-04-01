@@ -1,12 +1,14 @@
 <docs>
-
+---
+title: 按钮类型
+---
 </docs>
 
 <script setup lang="ts">
 </script>
 
 <template>
-  <div>
+  <div class="components-wrapper">
     <UButton>default</UButton>
     <UButton disabled>
       disabled
@@ -23,8 +25,6 @@
     <UButton type="error">
       error
     </UButton>
-  </div>
-  <div>
     <UButton outline="none">
       outline none
     </UButton>
@@ -33,3 +33,11 @@
     </UButton>
   </div>
 </template>
+
+<style scoped>
+.components-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+</style>

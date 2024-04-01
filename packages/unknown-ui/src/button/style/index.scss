@@ -1,12 +1,20 @@
 @import "../../style/index.scss";
 
 .uu-button {
+  --uu-button-font-size-small: var(--uu-font-size-small);
+  --uu-button-font-size-base: var(--uu-font-size-base);
+  --uu-button-font-size-large: var(--uu-font-size-large);
+
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
   background: none;
   cursor: pointer;
   border: 1px solid var(--uu-color-border);
   outline: none;
   color: inherit;
-  padding: 4px 10px;
+  font-size: var(--uu-button-font-size-base);
+  padding: 4px 8px;
   border-radius: 4px;
 
   // 默认按钮样式
@@ -88,18 +96,37 @@
       background-color: var(--uu-color-error-active);
     }
   }
-  // 边框默认样式
-  &-outline--default {
-    border-style: solid;
+
+  &-size {
+    // 小按钮样式
+    &--small {
+      height: 26px;
+      padding: 2px 6px;
+      font-size: var(--uu-button-font-size-small);
+    }
+    // 大按钮样式
+    &--large {
+      height: 38px;
+      padding: 6px 10px;
+      font-size: var(--uu-button-font-size-large);
+    }
   }
-  // 边框虚线样式
-  &-outline--dashed {
-    border-style: dashed;
+
+  &-outline {
+    // 边框默认样式
+    &--default {
+      border-style: solid;
+      // 边框虚线样式
+    }
+    &--dashed {
+      border-style: dashed;
+    }
+    // 无边框样式
+    &--none {
+      border-style: none;
+    }
   }
-  // 无边框样式
-  &-outline--none {
-    border-style: none;
-  }
+
   // 按钮禁用样式
   &:disabled {
     cursor: not-allowed;
@@ -107,5 +134,4 @@
     border-color: #d9d9d9;
     background-color: #f0f0f0;
   }
-
 }

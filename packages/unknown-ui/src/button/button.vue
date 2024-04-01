@@ -15,7 +15,7 @@ const props = withDefaults(defineProps<Props>(), {
 const emit = defineEmits(['click'])
 
 interface Props {
-  type?: 'default' | 'primary' | 'warning' | 'error'
+  type?: 'default' | 'primary' | 'success' | 'warning' | 'error'
   outline?: 'default' | 'dashed' | 'none'
   disabled?: boolean
   size?: 'default' | 'small' | 'large'
