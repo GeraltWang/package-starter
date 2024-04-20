@@ -1,6 +1,6 @@
 import { computed, createVNode, defineComponent, ref } from 'vue'
 import type { PropType, VNode } from 'vue'
-import { autoPlacement, offset, useFloating } from '@floating-ui/vue'
+import { offset, useFloating } from '@floating-ui/vue'
 import type { Placement } from '@floating-ui/vue'
 import { filterEmpty, isBaseType } from '@v-c/utils'
 import { useClassNames } from '@unknown-ui/utils'
@@ -26,7 +26,7 @@ export default defineComponent({
     const placement = computed(() => props.placement)
     const { floatingStyles } = useFloating(reference, floating, {
       placement,
-      middleware: [offset(10), autoPlacement()],
+      middleware: [offset(10)],
     })
 
     const { c } = useClassNames('tooltip')
