@@ -2,6 +2,7 @@
 ---
 title: 输入框尺寸
 ---
+`input` 输入框组件 `size` 使用例子
 </docs>
 
 <script setup lang="ts">
@@ -24,8 +25,8 @@ const value3 = ref('large')
 
 <style scoped>
 .components-wrapper {
-  display: flex;
-  flex-flow: column wrap;
-  gap: 10px;
+	display: flex;
+	flex-flow: column wrap;
+	gap: 10px;
 }
 </style>
