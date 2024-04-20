@@ -26,8 +26,5 @@
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "references": [
-    { "path": "./tsconfig.node.json" },
-    { "path": "./tsconfig.vitepress.json" }
-  ]
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
