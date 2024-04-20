@@ -23,14 +23,11 @@ export default defineConfig({
       '/components/': [
         { text: 'Button 按钮', link: '/components/button/' },
         { text: 'Input 输入框', link: '/components/input/' },
+        { text: 'Tooltip 提示', link: '/components/tooltip/' },
       ],
-      '/utils/': [
-        { text: 'gen-class', link: '/utils/gen-class' },
-      ],
+      '/utils/': [{ text: 'gen-class', link: '/utils/gen-class' }],
     },
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
-    ],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
   },
 })
