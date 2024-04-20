@@ -1,8 +1,9 @@
 import { computed, createVNode, defineComponent, ref } from 'vue'
 import type { PropType, VNode } from 'vue'
-import { useFloating } from '@floating-ui/vue'
+import { autoPlacement, offset, useFloating } from '@floating-ui/vue'
 import type { Placement } from '@floating-ui/vue'
 import { filterEmpty, isBaseType } from '@v-c/utils'
+import { useClassNames } from '@unknown-ui/utils'
 
 export default defineComponent({
   name: 'UTooltip',
@@ -14,6 +15,10 @@ export default defineComponent({
     content: {
       type: String as PropType<string>,
     },
+    trigger: {
+      type: String as PropType<'hover' | 'click'>,
+      default: 'hover',
+    },
   },
   setup(props, { slots }) {
     const reference = ref(null)
@@ -21,14 +26,58 @@ export default defineComponent({
     const placement = computed(() => props.placement)
     const { floatingStyles } = useFloating(reference, floating, {
       placement,
+      middleware: [offset(10), autoPlacement()],
     })
+
+    const { c } = useClassNames('tooltip')
+
+    const show = ref(false)
+
+    let timer: ReturnType<typeof setTimeout> | undefined
+
+    const handleMouseEnter = () => {
+      if (props.trigger !== 'hover')
+        return
+      show.value = true
+    }
+
+    const handleMouseLeave = () => {
+      timer = setTimeout(() => {
+        show.value = false
+      }, 150)
+    }
+
+    const handleClick = () => {
+      if (props.trigger !== 'click')
+        return
+      show.value = true
+    }
 
     return () => {
       const RenderTooltip = () => {
         if (!reference.value)
           return null
+
+        if (!show.value)
+          return null
+
+        const cls = {
+          [c()]: true,
+        }
+
+        const events = {
+          onMouseenter: () => {
+            if (timer)
+              clearTimeout(timer)
+            timer = undefined
+          },
+          onMouseleave: () => {
+            show.value = false
+          },
+        }
+
         return (
-          <div ref={floating} style={floatingStyles.value}>
+          <div class={cls} ref={floating} style={floatingStyles.value} {...events}>
             {slots.content ? slots.content?.() : props.content}
           </div>
         )
@@ -51,8 +100,15 @@ export default defineComponent({
         return node
       }
 
+      const events = {
+        onMouseenter: handleMouseEnter,
+        onMouseleave: handleMouseLeave,
+        onClick: handleClick,
+      }
+
       const ReferenceNode = createVNode(node as VNode, {
         ref: reference,
+        ...events,
       })
       return (
         <>

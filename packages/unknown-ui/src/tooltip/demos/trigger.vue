@@ -1,6 +1,6 @@
 <docs>
 ---
-title: 基础使用
+title: 触发方式
 ---
 </docs>
 
@@ -8,9 +8,9 @@ title: 基础使用
 
 <template>
   <div class="components-wrapper">
-    <UTooltip placement="top">
+    <UTooltip placement="top" trigger="click">
       <UButton type="primary">
-        tooltip
+        click to trigger
       </UButton>
       <template #content>
         <div>这是一个tooltip</div>

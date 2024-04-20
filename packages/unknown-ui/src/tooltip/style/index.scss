@@ -1,1 +1,14 @@
 @import "../../style/index";
+
+.uu-tooltip {
+  box-sizing: border-box;
+  padding: 4px 8px;
+  font-size: var(--uu-font-size-base);
+  color: var(--uu-color-white);
+  background-color: rgb(var(--uu-color-black-rgb) 0.85);
+  border-radius: 4px;
+  box-shadow:
+    0 6px 16px 0 rgb(0 0 0 / 8%),
+    0 3px 6px -4px rgb(0 0 0 / 12%),
+    0 9px 28px 8px rgb(0 0 0 / 5%);
+}
