@@ -6,7 +6,7 @@ export default {
   install(app: App) {
     Object.entries(components).forEach(([_name, component]) => {
       if (component.install)
-        app.use(component)
+        app.use(component as any)
     })
   },
   version: pkg.version,
