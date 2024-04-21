@@ -24,6 +24,7 @@ export default defineConfig({
         { text: 'Button 按钮', link: '/components/button/' },
         { text: 'Input 输入框', link: '/components/input/' },
         { text: 'Tooltip 提示', link: '/components/tooltip/' },
+        { text: 'Table 表格', link: '/components/table/' },
       ],
       '/utils/': [{ text: 'gen-class', link: '/utils/gen-class' }],
     },
