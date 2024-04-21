@@ -39,8 +39,8 @@
     "vite-plugin-dts": "^3.8.3",
     "vite-plugin-tsx-resolve-types": "^0.0.2",
     "vite-plugin-vitepress-demo": "^2.2.1",
-    "vitepress": "^1.0.1",
-    "vue-tsc": "^2.0.7"
+    "vitepress": "^1.1.3",
+    "vue-tsc": "^2.0.13"
   },
   "lint-staged": {
     "./**/*.{js,jsx,ts,tsx,vue,css,less,scss,json}": [
