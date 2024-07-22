@@ -10,15 +10,15 @@
     "build:css": "esno ./scripts/css-bundle.ts"
   },
   "dependencies": {
-    "vue": "^3.4.21"
+    "vue": "^3.4.33"
   },
   "devDependencies": {
     "@ant-design/colors": "^7.0.2",
     "@mistjs/eslint-config": "^1.0.0",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^20.11.30",
-    "@vitejs/plugin-vue": "^5.0.4",
-    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@types/node": "^20.14.11",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vitejs/plugin-vue-jsx": "^4.0.0",
     "eslint": "8.55.0",
     "esno": "^4.7.0",
     "fast-glob": "^3.3.2",
@@ -35,12 +35,12 @@
     "stylelint-config-standard": "^35.0.0",
     "stylelint-config-standard-scss": "^12.0.0",
     "typescript": "^5.4.3",
-    "vite": "^5.2.6",
-    "vite-plugin-dts": "^3.8.3",
+    "vite": "^5.3.4",
+    "vite-plugin-dts": "^3.9.1",
     "vite-plugin-tsx-resolve-types": "^0.0.2",
     "vite-plugin-vitepress-demo": "^2.2.1",
-    "vitepress": "^1.1.3",
-    "vue-tsc": "^2.0.13"
+    "vitepress": "^1.3.1",
+    "vue-tsc": "^2.0.26"
   },
   "lint-staged": {
     "./**/*.{js,jsx,ts,tsx,vue,css,less,scss,json}": [
