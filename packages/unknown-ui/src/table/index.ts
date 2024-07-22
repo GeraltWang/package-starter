@@ -1,8 +1,6 @@
-import type { App } from 'vue'
+import { withInstall } from '@unknown-ui/utils'
 import Table from './table'
 
-Table.install = (app: App) => {
-  app.component(Table.name!, Table)
-}
+const UTable = withInstall(Table)
 
-export default Table
+export default UTable

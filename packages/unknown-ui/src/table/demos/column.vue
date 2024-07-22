@@ -1,17 +1,11 @@
 <docs>
 ---
-title: 基础使用
+title: 使用 column 组件渲染数据
 ---
 </docs>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-
-const columns = ref([
-  { title: '姓名', key: 'name' },
-  { title: '年龄', key: 'age' },
-  { title: '地址', key: 'address' },
-])
 
 const data = ref([
   { name: '张三', age: 18, address: '北京市朝阳区' },
@@ -22,7 +16,11 @@ const data = ref([
 
 <template>
   <div class="components-wrapper">
-    <UTable :data="data" :columns="columns" />
+    <UTable :data="data">
+      <UTableColumn key="name" title="姓名" />
+      <UTableColumn key="age" title="年龄" />
+      <UTableColumn key="address" title="地址" />
+    </UTable>
   </div>
 </template>
 

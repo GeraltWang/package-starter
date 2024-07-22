@@ -4,10 +4,15 @@ export interface ColumnType {
 }
 
 export interface HeaderProps {
-  columns: ColumnType[]
+  columns?: ColumnType[]
+}
+
+export interface BodyProps {
+  data?: any[]
+  columns?: ColumnType[]
 }
 
 export interface TableProps {
   data?: any[]
-  columns: ColumnType[]
+  columns?: ColumnType[]
 }
