@@ -8,6 +8,7 @@
     ".vitepress/**/*.ts",
     ".vitepress/**/*.tsx",
     ".vitepress/**/*.vue",
-    "packages/unknown-ui/src/*.ts"
+    // "packages/unknown-ui/src/*.ts",
+    "packages/**/demos/*.vue"
   ]
 }

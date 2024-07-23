@@ -19,8 +19,8 @@ const emit = defineEmits<{
 }>()
 
 defineSlots<{
-  prefix(): any
-  suffix(): any
+  prefix: () => any
+  suffix: () => any
 }>()
 
 const attrs = useAttrs()
