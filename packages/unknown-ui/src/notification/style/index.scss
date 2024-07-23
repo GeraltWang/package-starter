@@ -1,0 +1,47 @@
+@import "../../style/index";
+
+.uu-notification {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  z-index: 1000;
+  min-width: 58px;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 344px;
+    padding: 16px;
+    margin-top: 16px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px 0 rgb(0 0 0 / 8%), 0 3px 6px -4px rgb(0 0 0 / 12%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+
+    &-title, &-content {
+      font-size: var(--uu-font-size-base);
+    }
+
+    &-title {
+      font-weight: 500;
+      color: var(--uu-color-text);
+    }
+
+    &-content {
+      color: var(--uu-color-secondary);
+    }
+  }
+}
+
+.uu-slide-right-move, .uu-slide-right-enter-active, .uu-slide-right-leave-active {
+  transition: all 0.3s;
+}
+
+.uu-slide-right-leave-active {
+  position: absolute;
+}
+
+.uu-slide-right-enter-from, .uu-slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+}

@@ -26,6 +26,7 @@ export default defineConfig({
         { text: 'Tooltip 提示', link: '/components/tooltip/' },
         { text: 'Table 表格', link: '/components/table/' },
         { text: 'Virtual List 虚拟列表', link: '/components/virtual-list/' },
+        { text: 'Notification 通知', link: '/components/notification/' },
 
       ],
       '/utils/': [{ text: 'gen-class', link: '/utils/gen-class' }],
