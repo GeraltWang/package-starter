@@ -7,7 +7,8 @@
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
     "genColors": "esno ./scripts/gen-colors.ts",
-    "build:css": "esno ./scripts/css-bundle.ts"
+    "build:css": "esno ./scripts/css-bundle.ts",
+    "test": "vitest"
   },
   "dependencies": {
     "vue": "^3.4.33"
@@ -25,6 +26,7 @@
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
     "husky": "^9.0.11",
+    "jsdom": "^24.1.1",
     "lint-staged": "^15.2.2",
     "postcss": "^8.4.38",
     "postcss-html": "^1.6.0",
@@ -41,6 +43,7 @@
     "vite-plugin-tsx-resolve-types": "^0.0.2",
     "vite-plugin-vitepress-demo": "^2.2.1",
     "vitepress": "^1.3.1",
+    "vitest": "^2.0.4",
     "vue-tsc": "^2.0.26"
   },
   "lint-staged": {

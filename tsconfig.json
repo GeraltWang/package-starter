@@ -11,10 +11,12 @@
     "moduleResolution": "bundler",
     "paths": {
       "@unknown-ui/utils": ["packages/utils/src"],
+      "@unknown-ui/icons": ["packages/icons/src"],
       "unknown-ui": ["packages/unknown-ui/src"],
       "unknown-ui/*": ["packages/unknown-ui/src/*"]
     },
     "resolveJsonModule": true,
+    "types": ["vitest/globals"],
     "allowImportingTsExtensions": true,
 
     /* Linting */

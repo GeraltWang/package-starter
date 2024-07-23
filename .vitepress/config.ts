@@ -8,6 +8,7 @@ export default defineConfig({
     'docs/(.*)': '(.*)',
     'packages/unknown-ui/src/:component/(.*)': 'components/:component/(.*)',
     'packages/utils/src/(.*)': 'utils/(.*)',
+    'packages/icons/docs/(.*)': 'components/icons/(.*)',
   },
   // srcDir: './docs',
   themeConfig: {
@@ -21,6 +22,7 @@ export default defineConfig({
 
     sidebar: {
       '/components/': [
+        { text: 'Icons 图标', link: '/components/icons/' },
         { text: 'Button 按钮', link: '/components/button/' },
         { text: 'Input 输入框', link: '/components/input/' },
         { text: 'Tooltip 提示', link: '/components/tooltip/' },
